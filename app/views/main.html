@@ -1,0 +1,30 @@
+<!--
+	Layout for most pages of app.
+	
+	The header is flexible height.
+	The body takes 100% of the rest of the height.
+-->
+<div ng-hide="waiting" class="container-table {{pageType}}">
+	<div class="container-table-row header">
+		<div class="container-table-cell" id="header" ng-switch="pageType">
+			<div ng-switch-when="album-root"><div ng-include=" 'views/album_root_header.html' "></div></div>
+			<div ng-switch-when="album-week"><div ng-include=" 'views/album_week_header.html' "></div></div>
+			<div ng-switch-when="album-year"><div ng-include=" 'views/album_year_header.html' "></div></div>
+			<div ng-switch-when="photo"><div ng-include=" 'views/photo_header.html' "></div></div>
+		</div>
+	</div>
+	<div class="container-table-row secondary-header">
+		<div class="container-table-cell" id="secondary-header" ng-switch="pageType">
+			<div ng-switch-when="album-year"><div ng-include=" 'views/album_year_secondary_header.html' "></div></div>
+		</div>
+	</div>
+	<div class="container-table-row body">
+		<div class="container-table-cell">
+			<div id="body" ng-switch="albumOrPhoto">
+				<div ng-switch-when="album"><div ng-include=" 'views/album_body.html' "></div></div>
+				<div ng-switch-when="photo"><div ng-include=" 'views/photo_body.html' "></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-if="waiting">WAITING</div>

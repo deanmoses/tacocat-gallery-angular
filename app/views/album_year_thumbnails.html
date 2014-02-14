@@ -1,0 +1,8 @@
+<div data-ng-repeat="month in album.childAlbumsByMonth">
+	<section class="month">
+		<h1>{{month.monthName}}</h1>
+		<div data-ng-repeat="childAlbum in month.albums">
+			<div ng-include=" 'views/thumbnail.html' "></div>
+		</div>
+	</section>
+<div>

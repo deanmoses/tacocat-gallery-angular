@@ -1,0 +1,5 @@
+<article class="thumbnail">
+	<a ng-href="#/{{childAlbum.url}}"><img src="{{childAlbum.thumbnail.url}}" width="{{childAlbum.thumbnail.width}}px" height="{{childAlbum.thumbnail.height}}px" alt="{{childAlbum.title}}"/></a>
+	<a ng-href="#/{{childAlbum.url}}" style="width:{{childAlbum.thumbnail.width}}px" class="title"><h1>{{childAlbum.title}}</h1></a>
+	<div style="width:{{childAlbum.thumbnail.width}}px" class="summary" ng-if="childAlbum.summary">{{childAlbum.summary}}</div>
+</article>

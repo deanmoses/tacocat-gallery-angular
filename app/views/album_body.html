@@ -1,0 +1,17 @@
+<section class="caption" ng-if="album.description">
+	<h1 class="hidden">Overview</h1>
+	<span ng-bind-html="album.description"></span>
+</section>
+<div class="container-table">
+	<div class="firsts-container" ng-if="album.sidebar">
+		<section class="firsts" ng-bind-html="album.sidebar"></section>
+	</div>
+	<section class="thumbnails">
+		<h1 class="hidden">Pictures</h1>
+		<div ng-switch="pageType">
+			<div ng-switch-when="album-root"><div ng-include=" 'views/album_thumbnails.html' "></div></div>
+			<div ng-switch-when="album-week"><div ng-include=" 'views/album_thumbnails.html' "></div></div>
+			<div ng-switch-when="album-year"><div ng-include=" 'views/album_year_thumbnails.html' "></div></div>
+		</div>
+	</section>
+</div>
