@@ -1,11 +1,14 @@
-<h1><a href="#v/" ng-bind-html="photo.title"></a></h1>
-<nav class="button-group float-right">
-	<h1 class="hidden">Photo Navigation</h1>
- 	<a class="button" ng-if="prevPhoto" href="#{{prevPhoto.url}}">&#x2039; Prev</a>
-    <a class="button" href="#{{album.url}}">Album</a>
-    <a class="button" ng-if="nextPhoto" href="#{{nextPhoto.url}}">Next &#x203A;</a>
-</nav>
-<div class="admin-controls">
-	<a class="caption-button">caption</a>
-	<a target="edit" href="http://tacocat.com/pictures/main.php?g2_view=core.ItemAdmin&g2_subView=core.ItemEdit&g2_itemId={{id}}">edit</a>
+<div class="navbar-header">
+	<span class="navbar-brand">{{photo.title}}</span>
 </div>
+<ul class="nav navbar-nav navbar-right">
+	<li><a class="btn">caption</a></li>
+	<li><a class="btn" target="edit" href="http://tacocat.com/pictures/main.php?g2_view=core.ItemAdmin&g2_subView=core.ItemEdit&g2_itemId={{photo.id}}">edit</a></li>
+    <li>
+    	<div class="btn-group">
+    		<a class="btn btn-default" ng-disabled="!prevPhoto" href="#{{prevPhoto.url}}"><span class="glyphicon glyphicon-chevron-left"></span> Prev</a>
+			<a class="btn btn-default" href="#{{album.url}}"><span class="glyphicon glyphicon-home"></span> Album</a>
+			<a class="btn btn-default" ng-disabled="!nextPhoto" href="#{{nextPhoto.url}}">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+    	</div>
+    </li>
+</ul>

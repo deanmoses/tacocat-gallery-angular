@@ -1,3 +1,24 @@
-<div ng-repeat="childAlbum in album.children">
-	<div ng-include=" 'views/thumbnail.html' "></div>
-</div>
+<style>
+	.thumbnail {
+		display: inline-block;
+		border: 0 none;
+		box-shadow: none;
+		vertical-align: top;
+		margin-bottom: 0;
+	}
+	.thumbnail .thumb-caption {
+		color: black;
+		text-decoration: none;
+		text-align: center;
+		margin-top: 4px;
+		display: block;
+	}
+	.thumbnail a {
+		text-decoration: none;
+	}
+</style>
+<span ng-repeat="childAlbum in album.children" class="thumbnail">
+	<a ng-href="#/{{childAlbum.url}}"><img src="{{childAlbum.thumbnail.url}}" width="{{childAlbum.thumbnail.width}}px" height="{{childAlbum.thumbnail.height}}px" alt="{{childAlbum.title}}"/></a>
+	<a ng-href="#/{{childAlbum.url}}"><span class="thumb-caption" style="width:{{childAlbum.thumbnail.width}}px;">{{childAlbum.title}}</span></span>
+	<p ng-if="childAlbum.summary" style="width:{{childAlbum.thumbnail.width}}px;">{{childAlbum.summary}}</p>
+</span>

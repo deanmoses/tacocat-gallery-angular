@@ -1,6 +1,18 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+$font-size-base: 16px;
+$font-family-sans-serif:  "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+$line-height-base: 1.5;
+
 @import 'sass-bootstrap/lib/bootstrap';
+
+.nav .btn-group {
+	margin: 8px 20px;
+}
+
+.caption {
+	margin-top: 20px;
+}
 
 .browsehappy {
     margin: 0.2em 0;

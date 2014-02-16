@@ -1,5 +1,27 @@
 node_modules
 dist
 .tmp
+
+# SASS intermediate compile files
+*.scssc
+
+# SASS cache directory
 .sass-cache
+
+# bower package installation dir
 app/bower_components
+
+# compiled JST templates
+app/templates/templates.js
+
+# temporary editor save files
+*~
+
+# OSX thumnail caches
+.DS_Store
+
+# log files
+*.log
+
+# JetBrains editor dir
+.idea/
