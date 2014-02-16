@@ -6,7 +6,7 @@
 		<span ng-switch-when="photo"><ng-include src=" 'views/photo_header.html' "></ng-include></span>
 	</div>
 </nav>
-<div ng-hide="waiting" ng-switch="albumOrPhoto">
+<div ng-if="!waiting" ng-switch="albumOrPhoto">
 	<span ng-switch-when="album"><ng-include src=" 'views/album_body.html' "></ng-include></span>
 	<span ng-switch-when="photo"><ng-include src=" 'views/photo_body.html' "></ng-include></span>
 </div>

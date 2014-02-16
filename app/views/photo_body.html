@@ -1,10 +1,10 @@
-<div class="container-fluid">
-	<section class="col-md-3 caption">
+<div class="container-fluid photo-body">
+	<section class="col-md-3">
 		<h2 class="hidden">Caption</h2>
-	    <span ng-bind-html="photo.description"></span>
+	    <span ng-bind-html="photo.description" class="caption"></span>
 	</section>
 	<section class="col-md-9">
 		<h2 class="hidden">Photo</h2>
-		<img src="{{photo.fullSizeImage.url}}" style="max-width: {{photo.width}}px; max-height: {{photo.height}}px" />
+		<img src="{{photo.fullSizeImage.url}}" style="width: 100%; max-width: {{photo.width}}px; max-height: {{photo.height}}px" />
 	</section>
 </div>

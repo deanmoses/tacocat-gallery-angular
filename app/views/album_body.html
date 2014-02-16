@@ -1,11 +1,27 @@
 <section class="caption container" ng-if="album.description">
 	<h1 class="hidden">Overview</h1>
-	<span ng-bind-html="album.description"></span>
+	<span class="caption" ng-bind-html="album.description"></span>
 </section>
+<style>
+	.firsts {
+		display: inline-block;
+		width: 12em;
+		vertical-align: top;
+border-top-right-radius: 1em;
+border-bottom-right-radius: 1em;
+margin-top: 1em;
+margin-right: 1em;
+padding: 1em;
+background: #EEE;
+	}
+	.thumbnails {
+		display: inline-block;
+	}
+</style>
 <div class="container">
-	<div class="firsts-container" ng-if="album.sidebar">
-		<section class="firsts" ng-bind-html="album.sidebar"></section>
-	</div>
+	<section class="firsts" ng-if="album.sidebar">
+		<span ng-bind-html="album.sidebar"></span>
+	</section>
 	<section class="thumbnails">
 		<h1 class="hidden">Pictures</h1>
 		<div ng-switch="pageType">
